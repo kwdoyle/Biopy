@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from Bio import SeqIO
 for seq_record in SeqIO.parse("outgroup sequence.fasta", "fasta"):
     print(seq_record.id)
