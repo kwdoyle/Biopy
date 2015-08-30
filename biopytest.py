@@ -5,7 +5,7 @@ from Bio.Seq import Seq
 from Bio.Alphabet import IUPAC
 
 # read the fasta file
-for seq_record in SeqIO.parse("outgroup sequence.fasta", "fasta"):
+for seq_record in SeqIO.parse("mouse_mRNA.fasta", "fasta"):
     print(seq_record.id)
     print("Coding Strand:")
     print(repr(seq_record.seq))
@@ -38,4 +38,4 @@ print(repr(m_rna))
 # translated protein sequence
 print("Protein Sequence:")
 print(repr(m_rna.translate()))
-# the initial sequence was not in multiples of 3, giving an error when this runs, but the point of this was just to test some of these commands anyway.
+
