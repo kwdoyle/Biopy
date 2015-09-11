@@ -5,6 +5,7 @@ from Bio.Seq import Seq
 from Bio.Alphabet import IUPAC
 
 # read the fasta file
+# this function should be able to read the file if it is in the same directory and run from the terminal.
 for seq_record in SeqIO.parse("mouse_mRNA.fasta", "fasta"):
     print(seq_record.id)
     print("Coding Strand:")
@@ -38,4 +39,3 @@ print(repr(m_rna))
 # translated protein sequence
 print("Protein Sequence:")
 print(repr(m_rna.translate()))
-

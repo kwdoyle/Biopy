@@ -12,13 +12,13 @@ print("DNA:")
 print(repr(my_seq))
 print("RNA:")
 print(repr(mRNA))
-print("Sequence of amino acids, aka a protein:")
+print("Sequence of amino acids:")
 print(repr(mRNA.translate()))
 
 # this is here to show the key for what letters represent which amino acid
 print("Amino acid key:")
 print(IUPACData.protein_letters_1to3)
 
-# here is now to display the codon translation table:
+# this is how to display the codon translation table:
 standard_table = CodonTable.unambiguous_dna_by_id[1]
 print(standard_table)
