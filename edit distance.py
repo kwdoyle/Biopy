@@ -77,7 +77,6 @@ def cost(X, Y):
 Y = "AAGGTATGAATC"
 X = "AACGTTGAC"
 
-
 gap = 3  # Gap cost.
 
 #A = []  # This is another way to make the empty matrix
@@ -85,12 +84,14 @@ gap = 3  # Gap cost.
 #    A.append([0]*len(Y))
 
 # Create empty matrices
+# The A matrix stores the cost values for all possible alignments
+# The B matrix stores the coordinates of the path taken through the A matrix in order to obtain the alignment with the minimum total cost
 A = np.zeros((len(X)+1,len(Y)+1))
 B = np.zeros((len(X)+1,len(Y)+1), dtype=tuple)
-#print(A.shape[0])  # This shows the number of rows and columns in a matrix.
+#print(A.shape)  # This shows the number of rows and columns in a matrix.
 
 EditDistance(X, Y)
-print(A[::-1])  # this prints the matrix in the correct way for human-viewing
+print A[::-1]  # this prints the matrix in the correct way for human-viewing
 
-print(path(len(X), len(Y)))
-print(parse(len(X), len(Y)))
+print path(len(X), len(Y))
+print parse(len(X), len(Y))
