@@ -2,7 +2,7 @@ import numpy as np
 
 # Calculate the edit distance for all potential pairwise matches
 def EditDistance(X, Y):
-# these first 2 loops set the "null alignment" spots in the begining of the sequences, as well as the cost values for each first character in both sequences for aligning with this "null" (gap) spot.
+# these first 2 loops set the "null alignment" spots in the beginning of the sequences, as well as the cost values for each first character in both sequences for aligning with this "null" (gap) spot.
     for i in range(0, len(X)+1):
         A[i,0] = i * gap
 
