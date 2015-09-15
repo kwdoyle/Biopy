@@ -19,7 +19,7 @@ X = "AACGTTGAC"
 
 # the 'ds' in align.globalXX means: A (d)ictionary returns the score of any pair of characters and (s)ame open and extend gap penalties for both sequences.
 # help regarding pairwise2 was found at http://biopython.org/DIST/docs/api/Bio.pairwise2-module.html
-algn = pairwise2.align.globalds(a, b, matrix, gap_open, gap_extend)
+algn = pairwise2.align.globalds(X, Y, matrix, gap_open, gap_extend)
 best_align = algn[0]
 print("Best alignment:")
 print(best_align)
